@@ -35,7 +35,7 @@ m=1
 while m==1:
     m=0
     print("Enter Your Choice: ")
-    print("1.Addition \n2.Subtraction \n3.Multiplication \n4.Division \n5.Distance \n6.speed\n7.Interest")
+    print("1. Addition \n2. Subtraction \n3. Multiplication \n4. Division \n5. Distance \n6. Speed\n7. Interest")
 
     print("------------------------------------------------------------------------------------------------")
     ch=int(input("Your choice is "))
