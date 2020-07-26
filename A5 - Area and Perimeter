@@ -1,0 +1,98 @@
+def area(ch,*args):
+    if ch==1: # Compute Area of a Square
+        area = args[0]**2 # Area of a Square = Side * Side
+    elif ch==2: # Compute Area of a Rectangle
+        area = args[0]*args[1] # Area of a Rectangle = length * Breadth
+    elif ch==3: # Compute Area of a Rhombus
+        area = 0.5*args[0]*args[1] # Area of a Rhombus = 0.5 * d1 * d2
+    elif ch==4: # Compute Area of a Parallelogram
+        area = args[0]*args[1] # Area of a Parallelogram = Base * Height
+        
+    return area # Return Area
+
+def perimeter(ch,*args):
+    if ch==1: # Compute Perimeter of a Square
+        perimeter = 4*args[0] # Perimeter of a Square = 4 * Side
+    elif ch==2: # Compute Perimeter of a Rectangle
+        perimeter = 2*(args[0]+args[1]) # Perimeter of a Rectangle = 2*(Length + Breadth)
+    elif ch==3: # Compute Perimeter of a Rhombus
+        perimeter = 2*((args[0]**2+args[1]**2)**0.5) # Perimeter of a Rhombus = 2*(square root of (d1^2 + d2^2))
+    elif ch==4: # Compute Perimeter of a Parallelogram
+        perimeter = 2*(args[0] + args[1]) # Perimeter of a Rhombus = 2*(Side1 + Side2)
+         
+    return perimeter # Return Perimeter.
+m=1
+while m==1:
+    m=0
+    print("Enter Your Choice: ")
+    print("1.Square \n2.Rectangle \n3.Rhombus \n4.Parallelogram")
+
+    print("------------------------------------------------------------------------------------------------")
+    print("Your choice is",end=" ")
+    ch=int(input())
+    print("------------------------------------------------------------------------------------------------")
+    print("")
+    
+    if ch==1: # Square
+        print("You have selected Square.")
+        a = float(input("Enter Side of a Square: "))
+        x = area(ch,a)
+        print("Area of a Square is",x ,"sq.unit")
+        y = perimeter(ch,a)
+        print("Perimeter of a Square is",y ,"unit")
+        print("")
+        print("------------------------------------------------------------------------------------------------")
+        print("")
+        
+    elif ch==2: # Rectangle
+        print("You have selected Rectangle.")
+        a = float(input("Enter Length of a Rectangle: "))
+        b = float(input("Enter Breadth of a Rectangle: "))
+        x = area(ch,a,b)
+        print("Area of a Rectangle is",x ,"sq.unit")
+        y = perimeter(ch,a,b)
+        print("Perimeter of a Rectangle is",y ,"unit")
+        print("")
+        print("------------------------------------------------------------------------------------------------")
+        print("")
+
+    elif ch==3: # Rhombus
+        print("You have selected Rhombus.")
+        a = float(input("Enter Length of a 1st Diagonal of Rhombus: "))
+        b = float(input("Enter Length of a 2nd Diagonal of Rhombus: "))
+        x = area(ch,a,b)
+        print("Area of a Rhombus is",x ,"sq.unit")
+        y = perimeter(ch,a,b)
+        print("Perimeter of a Rhombus is",y ,"unit")
+        print("")
+        print("------------------------------------------------------------------------------------------------")
+        print("")
+
+    elif ch==4: # Parallelogram
+        print("You have selected Parallelogram.")
+        a = float(input("Enter Length of a Base/Side1 of Parallelogram: "))
+        b = float(input("Enter Length of a Side2 of Parallelogram: "))
+        c = float(input("Enter Length of a Height of Parallelogram: "))
+        x = area(ch,a,c)
+        print("Area of a Parallelogram is",x ,"sq.unit")
+        y = perimeter(ch,a,b)
+        print("Perimeter of a Parallelogram is",y ,"unit")
+        print("")
+        print("------------------------------------------------------------------------------------------------")
+        print("")
+    
+    else:
+        print("OOPS!! Invalid Choice")
+        print("Try Again")
+
+    print("")
+    print("------------------------------------------------------------------------------------------------")
+    print("")
+        
+    print("Would You like to try again? (Yes/No)",end="")
+    m1 = input()
+    if m1=="YES" or m1=="YEs" or m1=="YeS" or m1=="Yes" or m1=="yES" or m1=="yEs" or m1=="yeS" or m1=="yes" or m1=="Y" or m1=="y" or m1=='1':
+        m=1
+    else:
+        print("Thank You!! ")
+
