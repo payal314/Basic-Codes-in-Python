@@ -1,0 +1,106 @@
+# Function to check whether a year is leap year or not
+# Function will return 1 for leap year and 0 for non leap year
+def check_leap(ly):
+    if ly%100==0 and ly%400==0:
+        rly=1 # It is a leap year
+    elif ly%100!=0 and ly%4==0:
+        rly=1 # It is a leap year
+    else:
+        rly=0 # It is not a leap year
+    return rly
+
+# Function to check whether the sum of digits in a year is greater than 16 or not
+# Function will return 1 if sum is greater than 16 else return 0 along with sum
+def sum_check(scy, c=16): 
+    sum = 0
+    while scy>0: # Check if all digits are added
+        sum+= (scy%10) #Adding Unit Digit to Sum
+        scy = scy//10 # Deleting Unit Place
+    if sum>c: # compare sum and c
+        sc=1
+    else:
+        sc=0
+    return sc, sum    
+
+    
+# Start of Main Function
+print("Below Code will print the next 20 leap year and sum of digits of leap year must be greater than 16")
+print(" ")
+print("Enter your Choice: \n 1 for user defined base year, \n 0 for current year as base year. ")
+print("Choice: ", end="")
+
+ch=int(input()) # Take choice from user
+print("")
+if ch==1: 
+    print("Enter base year: ",end="")
+    y=int(input()) # Take base year from user
+elif ch==0:
+    import datetime # Call datetime library
+    now = datetime.datetime.now() # Get current date and time
+    y= int(now.year)  # Take base year from now
+else:
+    print("OOPS!!! Invalid Choice")
+
+print("-------------------------------------------------------------------------")
+print("")
+
+print("Base Year: ",y) # Show user base year
+n1 = 20
+c = 16
+n=0 # Counter to count number of leap year printed
+print("")
+print("Following is the list of ",n1," leap years whose sum of digits is greater than ",c)
+while n<n1: 
+    y=y+1 # Increment year
+    ry = check_leap(y) # Call a function to check whether the year is leap year or not
+    if ry==1: # Check if ry = 1, it is a leap year
+        sc, sum = sum_check(y) # Call a function to check sum of digits in a year
+        if sc==1: # Check if sc = 1, sum >16
+            print("Count = ",n+1,"\t : \t Leap Year = ",y) # Print count and year
+            n=n+1 # Increment counter
+print("")
+print("Thank You!!")
+print("")
+print("-------------------------------------------------------------------------")
+
+# End of code
+
+"""
+
+Below Code will print the next 20 leap year and sum of digits of leap year must be greater than 16
+ 
+Enter your Choice: 
+ 1 for user defined base year, 
+ 0 for current year as base year. 
+Choice: 0
+
+-------------------------------------------------------------------------
+
+Base Year:  2020
+
+Following is the list of  20  leap years whose sum of digits is greater than  16
+Count =  1 	 : 	 Leap Year =  2088
+Count =  2 	 : 	 Leap Year =  2096
+Count =  3 	 : 	 Leap Year =  2168
+Count =  4 	 : 	 Leap Year =  2188
+Count =  5 	 : 	 Leap Year =  2196
+Count =  6 	 : 	 Leap Year =  2268
+Count =  7 	 : 	 Leap Year =  2276
+Count =  8 	 : 	 Leap Year =  2288
+Count =  9 	 : 	 Leap Year =  2296
+Count =  10 	 : 	 Leap Year =  2348
+Count =  11 	 : 	 Leap Year =  2368
+Count =  12 	 : 	 Leap Year =  2376
+Count =  13 	 : 	 Leap Year =  2384
+Count =  14 	 : 	 Leap Year =  2388
+Count =  15 	 : 	 Leap Year =  2396
+Count =  16 	 : 	 Leap Year =  2448
+Count =  17 	 : 	 Leap Year =  2456
+Count =  18 	 : 	 Leap Year =  2468
+Count =  19 	 : 	 Leap Year =  2476
+Count =  20 	 : 	 Leap Year =  2484
+
+Thank You!!
+
+-------------------------------------------------------------------------
+"""
