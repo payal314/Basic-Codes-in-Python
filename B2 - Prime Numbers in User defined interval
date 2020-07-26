@@ -1,0 +1,10 @@
+x=int(input("Enter the Lower value: "))
+y=int(input("Enter the Upper value: "))
+print("Following is the list of Prime Numbers in the interval ", x, "and", y,": ")
+for i in range(x,y+1):
+    for j in range(2,(i//2)+1):
+        if i%j==0:
+#            print(i,"is not a Prime Number.")
+            break
+    else:
+        print(i,"is a Prime Number.")
