@@ -1,0 +1,23 @@
+x=[]
+y=int(input("Enter number of elements you want in a list: "))
+sc=0
+nc=0
+fc=0
+for i in range(y):
+    z=input("Enter a Number or String: ")
+    if z.isdigit(): # if input is an integer then convert input string to integer
+        z=int(z)
+        nc+=1
+    else:
+        try: # try an error
+            z=float(z) # if input is an float then convert input string to float
+            fc+=1
+        except ValueError: # Catch an error
+            z=z
+            sc+=1
+    x.append(z) # Appending input in the list
+    
+print("User defined List: ",x)
+print("Number of Integers in the List = ",nc)
+print("Number of Floating Numbers in the List = ",fc)
+print("Number of String in the List = ",sc)
