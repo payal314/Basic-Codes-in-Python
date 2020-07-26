@@ -1,0 +1,54 @@
+from random import randint
+
+m=1
+while m==1:
+    m=0
+    print("-------------------------------------------------------------")
+    print("")
+    print("Let Begin the Game of Guessing the Number")
+    a=0
+    b=100
+    x = randint(a+1, b-1)
+#    print(x)
+    n = int(input("Number of Guesses you are going to try:"))
+
+    for i in range(n):
+        print("")
+        print("-------------------------------------------------------------")
+        print("")
+        print("Number of Remaining Attempts left:",n-i)
+        print("Hint: ",a,"< x <",b)
+        y=int(input("Your Guess:"))
+    
+        if x==y:
+            print("Hurrah!! You Guess the correct Number")
+            print("")
+            print("-------------------------------------------------------------")
+            print("")
+            break
+        elif x>y:
+            print("The Number is Bigger than Ur Guess")
+            a=y
+        elif x<y:
+            print("The Number is Smallar than Ur Guess")
+            b=y
+        if i==n-1:
+            print("-------------------------------------------------------------")
+            print("")
+            print("OOPS!! No More Chance Left")
+            print("Correct Number:",x)
+            print("Better Luck Next Time!!!")
+            print("")
+            print("-------------------------------------------------------------")
+            print("")
+    print("Would you like to Play again? (Yes/No): ", end="")
+    m1 = input()
+    if m1=="YES" or m1=="YEs" or m1=="YeS" or m1=="Yes" or m1=="yES" or m1=="yEs" or m1=="yeS" or m1=="yes" or m1=="Y" or m1=="y" or m1=='1':
+        m=1
+    else:
+        print("Thank You")
+    print("")
+    print("-------------------------------------------------------------")
+            
+    
+        
