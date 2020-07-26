@@ -1,0 +1,10 @@
+x=input("Enter a string:")
+c=int(input("Would You like to neglect blank space? (1: Yes / 0: No)"))
+if c==1:
+    x.replace(" ","")
+x1=x[::-1]
+print(x1)
+if x1==x:
+    print("Your String is a Palindrome")
+else:
+    print("Your String is not a Palindrome")
