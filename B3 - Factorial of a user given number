@@ -1,0 +1,13 @@
+def fac(x):
+    if x==1:
+        return x
+    else:
+        return(x*fac(x-1))
+print("Let us find the Factorial of a number:")
+x=int(input("Enter the Number: "))
+if x<0:
+    print("Factorial is not for negative numbers")
+elif x==0:
+    print("Factorial of 0 is 1")
+else:
+    print("The factorial of",x,"is a",fac(x))
