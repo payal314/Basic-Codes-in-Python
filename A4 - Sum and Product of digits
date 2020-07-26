@@ -1,0 +1,19 @@
+def sum_digits(d):
+    Sum=0
+    while d>0:
+        Sum+=(d%10)
+        d=d//10
+    return Sum
+
+def product_digits(d):
+    Product=1
+    while d>1:
+        Product*=(d%10)
+        d=d//10
+    return Product
+
+x=int(input("Enter a Number:"))
+s=sum_digits(x)
+print("Sum of Digits in the Number",x,"is",s)
+p=product_digits(x)
+print("Product of Digits in the Number",x,"is",p)
