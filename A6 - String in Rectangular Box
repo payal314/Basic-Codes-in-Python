@@ -1,0 +1,32 @@
+def sframe(n, x, xl, ml):
+    for i in range(n):
+        print(ch,x[i],end="")
+        for j in range(ml-xl[i]-1):
+            print(" ",end="")
+        print(ch)
+    
+x=[] # Empty list for Strings
+xl=[] # Empty list for length of Strings
+n=int(input("Enter Number of String you want to Print:")) # Number of Strings
+ch =input("Enter a Character which is Used for a Boundary:")
+# Take n Strings from users
+for i in range(n): 
+    s=input("Enter a string: ") # Take i th String from user
+    x.append(s) # Append String in the List x
+    xl.append(len(s)) # Append length of String in the List x
+print("List of String:",x) # 
+xm = xl.copy()
+xm.sort(reverse=True)
+ml = xm[0]+2
+#print(ml)
+print("---------------------------------------------------------")
+print("")
+for i in range(ml+2):
+    print(ch,end="")
+print("")
+sframe(n, x, xl, ml)
+for i in range(ml+2):
+    print(ch,end="")
+print("")
+print("")
+print("---------------------------------------------------------")
