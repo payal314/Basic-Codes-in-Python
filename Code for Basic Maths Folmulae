@@ -1,0 +1,148 @@
+def sum(a,b):
+    c=a+b
+    return c
+
+def sub(a,b):
+    c=a-b
+    return c
+
+def mul(a,b):
+    c=a*b
+    return c
+
+def div(a,b):
+    c=a/b
+    return c
+
+def dis(a,b):
+    c=((a[0]-a[1])**2+(b[0]-b[1])**2)**0.5
+    return c
+
+def sp(a,b):
+    c=a/b
+    return c
+
+def si(a,b,c):
+    d=a*b*c/100
+    return d
+
+def ci(a,b,c):
+    d=a*((1+b/100)**c-1)
+    return d
+
+# Start of Main Function
+m=1
+while m==1:
+    m=0
+    print("Enter Your Choice: ")
+    print("1.Addition \n2.Subtraction \n3.Multiplication \n4.Division \n5.Distance \n6.speed\n7.Interest")
+
+    print("------------------------------------------------------------------------------------------------")
+    ch=int(input("Your choice is "))
+    print("")
+    if ch==1:
+        a=int(input("Enter Value of a: "))
+        b=int(input("Enter Value of b: "))
+        print(" ")
+        c=sum(a,b)
+        print("The sum of", a,"and", b," is ",c)
+        print("")
+        print("------------------------------------------------------------------------------------------------")
+        print("")
+        
+    elif ch==2:
+        a=int(input("Enter Value of a: "))
+        b=int(input("Enter Value of b: "))
+        print(" ")
+        c=sub(a,b)
+        print("The Difference of", a,"and", b," is ",c)
+        print("")
+        print("------------------------------------------------------------------------------------------------")
+        print(" ")
+        
+    elif ch==3:
+        a=int(input("Enter Value of a: "))
+        b=int(input("Enter Value of b: "))
+        print(" ")
+        c=mul(a,b)
+        print("The Product of", a,"and", b," is ",c)
+        print("")
+        print("------------------------------------------------------------------------------------------------")
+        print(" ")
+        
+    elif ch==4:
+        a=int(input("Enter Value of a: "))
+        b=int(input("Enter Value of b: "))
+        print(" ")
+        c=div(a,b)
+        print("The Divison of", a,"and", b," is ",c)
+        print("")
+        print("------------------------------------------------------------------------------------------------")
+        print(" ")
+        
+    elif ch==5:
+        a,b=[0,0],[0,0]
+        a[0]=int(input("Enter value of x co-ordinate :"))
+        a[1]=int(input("Enter value of y co-ordinate :"))
+        b[0]=int(input("Enter value of x co-ordinate :"))
+        b[1]=int(input("Enter value of y co-ordinate :"))
+        print(" ")
+        c=dis(a,b)
+        print("The Distance between",a,"and",b,"is",c)
+        print("")
+        print("------------------------------------------------------------------------------------------------")
+        print("")
+        
+    elif ch==6:
+        a=int(input("Enter Value of Distance:"))
+        b=int(input("Enter Time:"))
+        print(" ")
+        c=sp(a,b)
+        print("The Speed of",a,"and",b,"is",c)
+        print("")
+        print("------------------------------------------------------------------------------------------------")
+        print("")
+        
+    elif ch==7:
+        print("Enter Your Choice: ")
+        print("a.Simple Interest\nb.Compound Interest\n")
+        print("Your choice is ",end=" ")
+        print(" ")
+        choice=input()
+        if choice=='a':
+            print("For Finding Simple Interest:")
+            a=int(input("Enter Principal Value:"))
+            b=int(input("Enter Rate of Interest:"))
+            c=int(input("Enter Number of years:"))
+            d=si(a,b,c)
+            print("The Simple Interest is ",d)
+            print("")
+            print("------------------------------------------------------------------------------------------------")
+            print("")
+        elif choice=='b':
+            print("For Finding Compound Interest:")
+            a=int(input("Enter Principal Value:"))
+            b=int(input("Enter Rate of Interest:"))
+            c=int(input("Enter Number of years:"))
+            d=ci(a,b,c)
+            print("The Compound Interest is ",d)
+            print("")
+            print("------------------------------------------------------------------------------------------------")
+            print("")
+        else:
+            print("Invalid Choice!!!")
+    else:
+        print("Invalid Choice!!!")
+    print("")
+    print("------------------------------------------------------------------------------------------------")
+    print("")
+    print("Would you like to retry for other input? (Yes/No): ", end="")
+    m1 = input()
+    if m1=="YES" or m1=="YEs" or m1=="YeS" or m1=="Yes" or m1=="yES" or m1=="yEs" or m1=="yeS" or m1=="yes" or m1=="Y" or m1=="y" or m1=='1':
+        m=1
+    else:
+        print("Thank You")
+    print("")
+    print("------------------------------------------------------------------------------------------------")
+            
+# End of Code
